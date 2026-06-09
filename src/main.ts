@@ -128,7 +128,7 @@ process.stdin.on("data", (msg) => {
 });
 
 export function logHere(msg: string) {
-  const logPath = path.join(process.cwd(), "log.txt");
+  const logPath = path.join(__dirname, "..", "log.txt");
   try {
     fs.appendFileSync(logPath, msg + "\n", "utf-8");
   } catch (error) {
